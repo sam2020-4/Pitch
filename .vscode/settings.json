@@ -1,3 +1,4 @@
 {
     "python.pythonPath": "/home/moringa/Desktop/moringa-prj/core/flask-prj/Pitch/virtual/bin/python3.8"
+    "python.linting.pylintArgs": ["--load-plugins", "pylint-flask", "pylint-flask-sqlalchemy"]
 }

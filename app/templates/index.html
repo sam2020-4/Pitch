@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+{% block content %}
+
+<body>
+  <br>
+  <div class="d-flex justify-content-center">
+    <div class="card-groups">
+      <div class="card border-info mb-3" style="max-width: 35rem;">
+        <div class="card-header">Product</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text">What great product manager has the brain of an engineer, the heart of a designer, and the speech of a diplomat.”</p>
+          <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Enter a New Pitch</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/Product">Read More</a></button>
+        </div>
+      </div>
+
+      <div class="card border-info mb-3" style="max-width: 35rem;">
+        <div class="card-header">Adverts</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Adverts</h5>
+          <p class="card-text">“Only a fool learns from his own mistakes. The wise man learns from the mistakes of others”</p>
+          <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Enter a New Pitch</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/Adverts">Read More</a></button>
+        </div>
+      </div>
+
+      <div class="card border-info mb-3" style="max-width: 35rem;">
+        <div class="card-header">Interview</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Interview</h5>
+          <p class="card-text">I want to live every moment totally and intensely. Even when I'm giving an interview or talking to people, that's all that I'm thinking about.
+            Read more at.</p>
+          <button type="button" class="btn btn-outline-primary"><a href="../Interview/">Enter a New Pitch</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/Interview">Read More</a></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock%}
+</body>

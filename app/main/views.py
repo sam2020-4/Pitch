@@ -1,4 +1,3 @@
-from flask import render_template
 from flask import render_template,request,redirect,url_for
 from flask_login import login_required,current_user
 from ..models import Pitches, User, Comments
@@ -13,8 +12,8 @@ def index():
     my index page
     return
     '''
-    message= "Hello"
-    title= 'Pitch It Ip!'
+    message= "Hello, welcome to Pitch-App!!"
+    title= 'Pitch-app!'
     return render_template('index.html', message=message,title=title)
 
 @main.route('/pitch/', methods = ['GET','POST'])

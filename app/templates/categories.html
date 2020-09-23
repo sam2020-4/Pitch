@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/categories.css')}}"> {% endblock %}
+<br>
+<br>
+<br>
+<br>
+
+<body>
+  {% block content %}
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Enter a New Pitch</a></button>
+  <div class="container">
+    <div class="card-columns">
+      {% for category in category[::-1] %}
+
+      <div class="card bg-transparent border-success">
+        <div class="card-header bg-transparent border-success">
+          {{category.title}}
+        </div>
+        <div class="card-body text">
+          <blockquote class="blockquote mb-0">
+            <p>{{category.pitch}}</p><br>
+            <footer class="blockquote-footer bg-transparent border-success">{{category.author}}
+              <br><cite title="Source Title">Publish date: {{category.date.strftime('%Y-%m-%d')}}</cite></footer>
+          </blockquote>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          <button type="button" class="btn btn-outline-success btn-sm"><a href="/new_comment/{{category.id}}">Comment</a></button> <button type="button" class="btn btn-outline-success btn-sm"><a href="/comments/{{category.id}}">View comments</a></button></div>
+      </div>
+
+      {% endfor %}
+      
+    </div>
+    {% endblock %}
+</body>

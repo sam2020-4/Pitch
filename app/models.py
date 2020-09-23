@@ -79,3 +79,6 @@ class Comments(db.Model):
 
     def __repr__(self):
         return f"Comments('{self.comment}', '{self.date_posted}')"
+
+# if __name__ == '__main__':
+#     manager.run()
