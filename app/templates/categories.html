@@ -7,11 +7,13 @@
 <br>
 <br>
 
-<body>
-  {% block content %}
-  <br>
-  <br>
-  <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Enter a New Pitch</a></button>
+{% block content %}
+<body>  
+  <br> <br>
+  <div class="container text-center">
+    <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Enter a New Pitch</a></button>
+  </div>
+
   <div class="container">
     <div class="card-columns">
       {% for category in category[::-1] %}
@@ -30,10 +32,11 @@
         <div class="card-footer bg-transparent border-success">
           <button type="button" class="btn btn-outline-success btn-sm"><a href="/new_comment/{{category.id}}">Comment</a></button> 
           <!-- <button type="button" class="btn btn-outline-success btn-sm"><a href="/comments/{{category.id}}">View comments</a></button></div> -->
-      </div>
-
-      {% endfor %}
-      
     </div>
+
+    {% endfor %}
+      
+  </div>
+</body>    
     {% endblock %}
-</body>
+

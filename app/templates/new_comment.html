@@ -2,9 +2,13 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
-<br> <hr> <br>
-<div class="container">
-<br> <hr> <br>
-  {{ wtf.quick_form(comment_form) }}
-</div>
+<body>
+  <div class="container">
+    <br> <hr> <br>
+    <h3 class="text-center" style="color: brown;">LEAVE A COMMENT HERE</h3>
+      {{ wtf.quick_form(comment_form) }}
+  </div>
+
+</body>
+
 {% endblock %}
