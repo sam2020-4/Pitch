@@ -2,11 +2,22 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
-<body>
+<body style="background: rgba(0, 128, 0, 0.3);">
+
   <div class="container">
-    <br> <hr> <br>
-    <h3 class="text-center" style="color: brown;">LEAVE A COMMENT HERE</h3>
-      {{ wtf.quick_form(comment_form) }}
+    <div class="row">
+      <br> <hr> <br>
+
+      <div class="col-md-3"></div>
+            
+      <div class="col-md-6"> 
+        <h3 class="text-center" style="color: brown;">LEAVE A COMMENT HERE</h3>
+        {{ wtf.quick_form(comment_form) }}
+      </div>  
+
+      <div class="col-md-3"></div>
+    </div>
+
   </div>
 
 </body>

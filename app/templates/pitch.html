@@ -2,9 +2,20 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
-<br> <hr><br>
-<div class="container">
-  {{ wtf.quick_form(pitch_entry) }}
-</div>
+<body style="background: rgba(0, 128, 0, 0.3);">
+  <div class="container">
+    <div class="row"> 
+      <br>
+      <h3 class="text-center" style="color: brown; font-weight: bold;">ENTER NEW PITCH HERE</h3>
+      <hr> <br>
+      <div class="col-md-3"></div>
 
+      <div class="col-md-6">
+        {{ wtf.quick_form(pitch_entry) }}
+      </div>
+
+      <div class="col-md-3"></div>
+    </div>
+  </div>  
+</body>
 {% endblock %}

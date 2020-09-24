@@ -4,10 +4,13 @@
 {% if user == current_user %}
 
 {% endif %}
-<br>
-<br>
+<body style="background: rgba(0, 128, 0, 0.3);">
+<br><br>
 <div class="container">
   <div class="row">
+    <h3 class="text-center" style="color: brown; font-weight: bold;">EDIT BIO HERE</h3>
+    <hr>
+    <div class="col-md-2"></div>
     <!-- displaying  Username-->
     <div class="col-md-4">
       <h3>Author:  {{user.author| capitalize}} </h3>
@@ -25,8 +28,8 @@
     </div>
 
     <!--Display profile photo-->
-    
-    <div class="col-md-8">
+
+    <div class="col-md-4">
       {% if user.profile_pic_path %}
 
       <div class="card">
@@ -42,13 +45,16 @@
         {% if user == current_user %}
         <form action="{{url_for('main.update_pic',uname=user.author)}}" method="post" enctype="multipart/form-data">
           <br>
+          <div class="rounded">         
           <input type="file"  name="photo" class="form-control" required>
-          <br>
+          </div>
           <input type="submit">
-
         </form>
         {% endif %}
       </div>
     </div>
+    <div class="col-md-2"></div>
   </div>
+    
+  </body>
   {% endblock %}
