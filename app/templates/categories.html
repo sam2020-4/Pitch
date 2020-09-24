@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 {% import "bootstrap/wtf.html" as wtf %}
 {% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/categories.css')}}"> {% endblock %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/.css')}}"> {% endblock %}
 <br>
 <br>
 <br>
@@ -28,7 +28,8 @@
           </blockquote>
         </div>
         <div class="card-footer bg-transparent border-success">
-          <button type="button" class="btn btn-outline-success btn-sm"><a href="/new_comment/{{category.id}}">Comment</a></button> <button type="button" class="btn btn-outline-success btn-sm"><a href="/comments/{{category.id}}">View comments</a></button></div>
+          <button type="button" class="btn btn-outline-success btn-sm"><a href="/new_comment/{{category.id}}">Comment</a></button> 
+          <!-- <button type="button" class="btn btn-outline-success btn-sm"><a href="/comments/{{category.id}}">View comments</a></button></div> -->
       </div>
 
       {% endfor %}
