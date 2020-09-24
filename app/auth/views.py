@@ -6,6 +6,26 @@ from .forms import LoginForm,RegistrationForm
 from ..import db
 from ..email import mail_message
 
+
+# register method
+@auth.route('/register',methods = ["GET","POST"])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(email = form.email.data,author = form.author.data,
+         password = form.password.data)
+
+        db.session.add(user)
+        db.session.commit()
+
+        mail_message("Welcome to Pitch-App!","email/welcome_user",user.email,user=user)
+
+        title = "New Account"
+
+        return redirect(url_for('auth.login'))
+
+    return render_template('auth/register.html',registration_form = form)
+
 # login method
 @auth.route('/login',methods=['GET','POST'])
 def login():
@@ -21,25 +41,6 @@ def login():
     title = "Pitches login"
     return render_template('auth/login.html',login_form = login_form,title=title)
 
-# register method
-@auth.route('/register',methods = ["GET","POST"])
-def register():
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        user = User(email = form.email.data,
-         author = form.author.data,
-         password = form.password.data)
-
-        db.session.add(user)
-        db.session.commit()
-
-        mail_message("Welcome to Pitch-App!","email/welcome_user",user.email,user=user)
-
-        title = "New Account"
-
-        return redirect(url_for('auth.login'))
-
-    return render_template('auth/register.html',registration_form = form)
 
 # logout method
 @auth.route('/logout')

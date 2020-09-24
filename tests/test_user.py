@@ -19,7 +19,7 @@ class UserModelTest(unittest.TestCase):
 class CommentsModelTest(unittest.TestCase):
 
     def setUp(self):
-       self.new_comment = Comments(id=1, user_id = 2, comment = 'cross buns',pitches_id = '5',date_posted='2018-09-09')
+       self.new_comment = Comments(id=1, user_id = 2, comment = 'kenya one',pitches_id = '5',date_posted='2018-09-09')
 
     def test_comment_variables(self):
 

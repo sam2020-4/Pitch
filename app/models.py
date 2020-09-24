@@ -80,5 +80,9 @@ class Comments(db.Model):
     def __repr__(self):
         return f"Comments('{self.comment}', '{self.date_posted}')"
 
+# @Manager.shell
+# def make_shell_context():
+#     return dict(app = app,db = db,User = User, Role = Role )
+
 # if __name__ == '__main__':
 #     manager.run()
