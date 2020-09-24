@@ -2,6 +2,7 @@ from flask import render_template,request,redirect,url_for
 from flask_login import login_required,current_user
 from ..models import Pitches, User, Comments
 from . import main
+from flask import render_template
 from .. import db,photos
 from .forms import PitchForm,CommentForm, UpdateProfile
 
@@ -101,14 +102,14 @@ def comment(id):
 
 @main.route('/new_comment/<int:pitches_id>', methods = ['GET', 'POST'])
 @login_required
-def new_comment(pitch_id):
-    pitch = Pitch.query.filter_by(id = pitch_id).first()
+def new_comment(pitches_id):
+    pitches = Pitches.query.filter_by(id = pitches_id).first()
     form = CommentForm()
 
     if form.validate_on_submit():
         comment = form.comment.data
 
-        new_comment = Comments(comment=comment,user_id=current_user.id, pitch_id=pitch_id)
+        new_comment = Comments(comment=comment,user_id=current_user.id, pitches_id=pitches_id)
 
 
         new_comment.save_comment()
@@ -116,4 +117,4 @@ def new_comment(pitch_id):
 
         return redirect(url_for('main.index'))
     title='New Pitch'
-    return render_template('new_comment.html',title=title,comment_form = form,pitch_id=pitch_id)
+    return render_template('new_comment.html',title=title,comment_form = form,pitches_id=pitches_id)
