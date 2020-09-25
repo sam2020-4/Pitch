@@ -36,15 +36,15 @@ Matata Samuel.
 Python version 3.8 Flask Heroku Gunicorn Internet connection
 
 ## Installation Process
-Navigate to my git repository https://github.com/sam2020-4/Pitch
+- Navigate to my git repository https://github.com/sam2020-4/Pitch
 
-Clone the project to your computer
+- Clone the project to your computer
 
-cd into the project (navigation)
+- cd into the project (navigation)
 
-On your terminal, run the command '$ pip freeze to confirm that you have all the requirements'
+- On your terminal, run the command '$ pip freeze to confirm that you have all the requirements'
 
-Run the command '$ python3 manage.py'
+- Run the command '$ python3 manage.py'
 
 ## Known Bugs
 The profile picture of users has an error uploading but am working on it.
