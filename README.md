@@ -18,18 +18,11 @@ Matata Samuel.
 
 3. As a user you can update your account.
 
-4. As a user when you forget your password, you can be directed to your email where you can reset.
+4. As a user you can add new piches and edit or update your posts
 
-5. As a user you can add new posts and edit or update your posts
+5. As a user you can view the pitches you have created in your own profile.
 
-6. As a user you can view the pitches you have created in your own profile.
-
-7. As a user you can see the pitches other users have posted.
-
-8. As a user you can delete your post.
-
-
-## Screenshot
+6. As a user you can see the pitches other users have posted.
 
 
 ## Setup/Installation Requirements
@@ -47,7 +40,7 @@ Python version 3.8 Flask Heroku Gunicorn Internet connection
 - Run the command '$ python3 manage.py'
 
 ## Known Bugs
-The profile picture of users has an error uploading but am working on it.
+So far the application has no bugs and incase you come across any bug please feel free to E-mail me.
 
 ## Support
 If you need any clarification on any aspect, feel free to reach me via email at mattasamuel3@gmail.com
