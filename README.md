@@ -47,4 +47,4 @@ If you need any clarification on any aspect, feel free to reach me via email at 
 
 ## License
 
-MIT License Copyright (c) 2019 Matata Samuel
+MIT License Copyright (c) 2020 Matata Samuel
